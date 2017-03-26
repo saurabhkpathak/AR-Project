@@ -9,16 +9,13 @@ public class BtnScript : MonoBehaviour, IVirtualButtonEventHandler {
 	// Use this for initialization
 	void Start () {
 		btnObject = GameObject.Find ("playButton");
-		zombie = GameObject.Find ("zombie");
 		btnObject.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
 	}
 
 	public void OnButtonPressed (VirtualButtonAbstractBehaviour vb) {
-		zombie.GetComponent<Animation> ().Play ();
 		Debug.Log ("Button Pressed!!!");
 	}
 
 	public void OnButtonReleased(VirtualButtonAbstractBehaviour vb) {
-		zombie.GetComponent<Animation> ().Stop ();
 	}
 }
