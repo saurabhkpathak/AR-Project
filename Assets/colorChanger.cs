@@ -18,12 +18,36 @@ public class colorChanger : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		GUI.Box (new Rect (10, 10, 90, 60), "Change Color");
+		//GUI.Box (new Rect (10, 10, 150, 120), "Change Color");
 
-		if(GUI.Button(new Rect(20, 40, 60, 20), "Button1")) {
+		if(GUI.Button(new Rect(20, 40, 110, 80), "Button1")) {
 			Debug.Log("Button Pressed");
 			carChasis = GameObject.Find ("Chassis");
 			carChasis.GetComponent<Renderer>().sharedMaterial = materials[1];
+		}
+
+		if(GUI.Button(new Rect(110, 40, 110, 80), "Button2")) {
+			Debug.Log("Button Pressed");
+			carChasis = GameObject.Find ("Chassis");
+			carChasis.GetComponent<Renderer>().sharedMaterial = materials[2];
+		}
+
+		if(GUI.Button(new Rect(200, 40, 110, 80), "Button3")) {
+			Debug.Log("Button Pressed");
+			carChasis = GameObject.Find ("Chassis");
+			carChasis.GetComponent<Renderer>().sharedMaterial = materials[3];
+		}
+
+		if(GUI.Button(new Rect(290, 40, 110, 80), "Button4")) {
+			Debug.Log("Button Pressed");
+			carChasis = GameObject.Find ("Chassis");
+			carChasis.GetComponent<Renderer>().sharedMaterial = materials[4];
+		}
+
+		if(GUI.Button(new Rect(380, 40, 110, 80), "Button5")) {
+			Debug.Log("Button Pressed");
+			carChasis = GameObject.Find ("Chassis");
+			carChasis.GetComponent<Renderer>().sharedMaterial = materials[5];
 		}
 	}
 }
