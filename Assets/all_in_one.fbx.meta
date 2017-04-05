@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: 674934fcc18f54399a2272575bb72831
+timeCreated: 1491345863
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Chassis
+    100004: Chassis_Car1
+    100006: Chassis_Car2
+    100008: LF_Wheel
+    100010: LF_Wheel_Car1
+    100012: LF_Wheel_Car2
+    100014: LR_Wheel
+    100016: LR_Wheel_Car1
+    100018: LR_Wheel_Car2
+    100020: RF_Wheel
+    100022: RF_Wheel_Car1
+    100024: RF_Wheel_Car2
+    100026: RR_Wheel
+    100028: RR_Wheel_Car1
+    100030: RR_Wheel_Car2
+    400000: //RootNode
+    400002: Chassis
+    400004: Chassis_Car1
+    400006: Chassis_Car2
+    400008: LF_Wheel
+    400010: LF_Wheel_Car1
+    400012: LF_Wheel_Car2
+    400014: LR_Wheel
+    400016: LR_Wheel_Car1
+    400018: LR_Wheel_Car2
+    400020: RF_Wheel
+    400022: RF_Wheel_Car1
+    400024: RF_Wheel_Car2
+    400026: RR_Wheel
+    400028: RR_Wheel_Car1
+    400030: RR_Wheel_Car2
+    2300000: Chassis
+    2300002: Chassis_Car1
+    2300004: Chassis_Car2
+    2300006: LF_Wheel
+    2300008: LF_Wheel_Car1
+    2300010: LF_Wheel_Car2
+    2300012: LR_Wheel
+    2300014: LR_Wheel_Car1
+    2300016: LR_Wheel_Car2
+    2300018: RF_Wheel
+    2300020: RF_Wheel_Car1
+    2300022: RF_Wheel_Car2
+    2300024: RR_Wheel
+    2300026: RR_Wheel_Car1
+    2300028: RR_Wheel_Car2
+    3300000: Chassis
+    3300002: Chassis_Car1
+    3300004: Chassis_Car2
+    3300006: LF_Wheel
+    3300008: LF_Wheel_Car1
+    3300010: LF_Wheel_Car2
+    3300012: LR_Wheel
+    3300014: LR_Wheel_Car1
+    3300016: LR_Wheel_Car2
+    3300018: RF_Wheel
+    3300020: RF_Wheel_Car1
+    3300022: RF_Wheel_Car2
+    3300024: RR_Wheel
+    3300026: RR_Wheel_Car1
+    3300028: RR_Wheel_Car2
+    4300000: RF_Wheel_Car2
+    4300002: RR_Wheel_Car2
+    4300004: LR_Wheel_Car2
+    4300006: Chassis_Car2
+    4300008: LF_Wheel_Car2
+    4300010: LF_Wheel_Car1
+    4300012: Chassis_Car1
+    4300014: LR_Wheel_Car1
+    4300016: RR_Wheel_Car1
+    4300018: RF_Wheel_Car1
+    4300020: RF_Wheel
+    4300022: RR_Wheel
+    4300024: LR_Wheel
+    4300026: LF_Wheel
+    4300028: Chassis
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
