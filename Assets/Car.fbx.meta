@@ -3,11 +3,34 @@ guid: 1b260ede6f26e0c49a51ce86c68895d8
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: Chassis
+    100004: LF_Wheel
+    100006: LR_Wheel
+    100008: RF_Wheel
+    100010: RR_Wheel
+    400000: //RootNode
+    400002: Chassis
+    400004: LF_Wheel
+    400006: LR_Wheel
+    400008: RF_Wheel
+    400010: RR_Wheel
+    2300000: Chassis
+    2300002: LF_Wheel
+    2300004: LR_Wheel
+    2300006: RF_Wheel
+    2300008: RR_Wheel
+    3300000: Chassis
+    3300002: LF_Wheel
+    3300004: LR_Wheel
+    3300006: RF_Wheel
+    3300008: RR_Wheel
     4300000: Chassis
     4300002: LF_Wheel
     4300004: LR_Wheel
     4300006: RR_Wheel
     4300008: RF_Wheel
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3
