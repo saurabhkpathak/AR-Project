@@ -19,7 +19,7 @@ public class tapController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("updated");
+		//Debug.Log ("updated");
 		if (carChasis1.GetComponent<Transform> ().localScale.x != 0) {
 			carChasis = carChasis1;
 		} else if (carChasis2.GetComponent<Transform> ().localScale.x != 0) {
