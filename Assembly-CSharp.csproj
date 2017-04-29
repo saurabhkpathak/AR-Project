@@ -121,10 +121,11 @@
      <Compile Include="Assets\Vuforia\Scripts\WireframeBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
+     <Compile Include="Assets\chasisTapController.cs" />
      <Compile Include="Assets\clickHandler.cs" />
      <Compile Include="Assets\colorChanger.cs" />
-     <Compile Include="Assets\tapController.cs" />
      <Compile Include="Assets\trackableList.cs" />
+     <Compile Include="Assets\wheelTapController.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\LeanTouch\Examples\Fonts\OFL.txt" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />

@@ -2,24 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tapController : MonoBehaviour {
+public class chasisTapController : MonoBehaviour {
 	private GameObject carChasis, carChasis1, carChasis2, carChasis3;
 	private GameObject car;
 	Material[] materials;
-	bool mouseToggle;
+	bool chasisMenuToggle;
+
 	// Use this for initialization
 	void Start () {
+		var car = GameObject.Find ("Car Model Changer");
+
 		carChasis1 = GameObject.Find ("Chassis1");
 		carChasis2 = GameObject.Find ("Chassis2");
 		carChasis3 = GameObject.Find ("Chassis3");
-		car = GameObject.Find ("Car Model Changer");
+		carChasis = carChasis1;
+
+		carChasis.GetComponent<Transform> ().localScale = new Vector3 (1, 1, 1);
+
 		materials = car.GetComponent<colorChanger> ().materials;
-		mouseToggle = false;
+
+		chasisMenuToggle = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//Debug.Log ("updated");
 		if (carChasis1.GetComponent<Transform> ().localScale.x != 0) {
 			carChasis = carChasis1;
 		} else if (carChasis2.GetComponent<Transform> ().localScale.x != 0) {
@@ -28,15 +34,19 @@ public class tapController : MonoBehaviour {
 			carChasis = carChasis3;
 		}
 	}
+
 	void OnMouseDown()
 	{
-//		Application.LoadLevel("SomeLevel");
 		Debug.Log("chasis tapped");
-		mouseToggle = !mouseToggle;
+		chasisMenuToggle = !chasisMenuToggle;
+		GameObject.Find ("Car Model Changer").GetComponent<colorChanger> ().chasisMenuOn = chasisMenuToggle;
+		if (chasisMenuToggle) {
+			GameObject.Find ("Car Model Changer").GetComponent<colorChanger> ().wheelMenuOn = false;
+		}
 	}
 
 	void OnGUI() {
-		if (mouseToggle) {
+		if (chasisMenuToggle) {
 			GUIStyle customButton = new GUIStyle("button");
 			customButton.fontSize = 40;
 
@@ -44,6 +54,19 @@ public class tapController : MonoBehaviour {
 			customLabel.fontSize = 36;
 
 			GUI.Label (new Rect (20, 40, 200, 100), "Body Color", customLabel);
+
+			if(GUI.Button(new Rect(20, 260, 410, 100), "Change Chasis", customButton)) {
+				Debug.Log("Button Pressed");
+				carChasis.GetComponent<Transform> ().localScale = new Vector3 (0, 0, 0);
+				if (carChasis == carChasis1) {
+					carChasis = carChasis2;
+				} else if (carChasis == carChasis2) {
+					carChasis = carChasis3;
+				} else {
+					carChasis = carChasis1;
+				}
+				carChasis.GetComponent<Transform> ().localScale = new Vector3 (1, 1, 1);
+			}
 
 			if(GUI.Button(new Rect(20, 100, 200, 100), "Black", customButton)) {
 				Debug.Log("Button Pressed");
