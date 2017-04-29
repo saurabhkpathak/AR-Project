@@ -9,12 +9,14 @@ public class wheelTapController : MonoBehaviour {
 	private GameObject rfWheel, rfWheel1, rfWheel2, rfWheel3;
 	private GameObject rrWheel, rrWheel1, rrWheel2, rrWheel3;
 	private float wheelSize;
+	Material[] materials;
 	private GameObject car;
 
 	// Use this for initialization
 	void Start () {
 		car = GameObject.Find ("Car Model Changer");
 		wheelMenuToggle = false;
+		materials = car.GetComponent<colorChanger> ().materials;
 
 		lfWheel1 = GameObject.Find ("LF_Wheel1");
 		lfWheel2 = GameObject.Find ("LF_Wheel2");
@@ -58,11 +60,56 @@ public class wheelTapController : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		if (wheelMenuToggle) {
+		if (GameObject.Find ("Car Model Changer").GetComponent<colorChanger> ().wheelMenuOn) {
 			GUIStyle customButton = new GUIStyle("button");
 			customButton.fontSize = 40;
 
-			if(GUI.Button(new Rect(20, 370, 410, 100), "Change Wheel", customButton)) {
+			GUIStyle customLabel = new GUIStyle("label");
+			customLabel.fontSize = 36;
+
+			GUI.Label (new Rect (20, 40, 300, 100), "Wheels Color", customLabel);
+
+			if(GUI.Button(new Rect(20, 100, 200, 100), "Black", customButton)) {
+				Debug.Log("Button Pressed");
+				lfWheel.GetComponent<Renderer>().sharedMaterial = materials[1];
+				lrWheel.GetComponent<Renderer>().sharedMaterial = materials[1];
+				rfWheel.GetComponent<Renderer>().sharedMaterial = materials[1];
+				rrWheel.GetComponent<Renderer>().sharedMaterial = materials[1];
+			}
+
+			if(GUI.Button(new Rect(20, 210, 200, 100), "Blue", customButton)) {
+				Debug.Log("Button Pressed");
+				lfWheel.GetComponent<Renderer>().sharedMaterial = materials[2];
+				lrWheel.GetComponent<Renderer>().sharedMaterial = materials[2];
+				rfWheel.GetComponent<Renderer>().sharedMaterial = materials[2];
+				rrWheel.GetComponent<Renderer>().sharedMaterial = materials[2];
+			}
+
+			if(GUI.Button(new Rect(20, 320, 200, 100), "Green", customButton)) {
+				Debug.Log("Button Pressed");
+				lfWheel.GetComponent<Renderer>().sharedMaterial = materials[3];
+				lrWheel.GetComponent<Renderer>().sharedMaterial = materials[3];
+				rfWheel.GetComponent<Renderer>().sharedMaterial = materials[3];
+				rrWheel.GetComponent<Renderer>().sharedMaterial = materials[3];
+			}
+
+			if(GUI.Button(new Rect(20, 430, 200, 100), "Red", customButton)) {
+				Debug.Log("Button Pressed");
+				lfWheel.GetComponent<Renderer>().sharedMaterial = materials[4];
+				lrWheel.GetComponent<Renderer>().sharedMaterial = materials[4];
+				rfWheel.GetComponent<Renderer>().sharedMaterial = materials[4];
+				rrWheel.GetComponent<Renderer>().sharedMaterial = materials[4];
+			}
+
+			if(GUI.Button(new Rect(20, 540, 200, 100), "Yellow", customButton)) {
+				Debug.Log("Button Pressed");
+				lfWheel.GetComponent<Renderer>().sharedMaterial = materials[5];
+				lrWheel.GetComponent<Renderer>().sharedMaterial = materials[5];
+				rfWheel.GetComponent<Renderer>().sharedMaterial = materials[5];
+				rrWheel.GetComponent<Renderer>().sharedMaterial = materials[5];
+			}
+
+			if(GUI.Button(new Rect(20, 650, 410, 100), "Change Wheel", customButton)) {
 				Debug.Log("Button Pressed");
 				lfWheel.GetComponent<Transform> ().localScale = new Vector3 (0, 0, 0);
 				lrWheel.GetComponent<Transform> ().localScale = new Vector3 (0, 0, 0);

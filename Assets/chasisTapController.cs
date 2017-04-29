@@ -46,7 +46,7 @@ public class chasisTapController : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		if (chasisMenuToggle) {
+		if (GameObject.Find ("Car Model Changer").GetComponent<colorChanger> ().chasisMenuOn) {
 			GUIStyle customButton = new GUIStyle("button");
 			customButton.fontSize = 40;
 
@@ -54,19 +54,6 @@ public class chasisTapController : MonoBehaviour {
 			customLabel.fontSize = 36;
 
 			GUI.Label (new Rect (20, 40, 200, 100), "Body Color", customLabel);
-
-			if(GUI.Button(new Rect(20, 260, 410, 100), "Change Chasis", customButton)) {
-				Debug.Log("Button Pressed");
-				carChasis.GetComponent<Transform> ().localScale = new Vector3 (0, 0, 0);
-				if (carChasis == carChasis1) {
-					carChasis = carChasis2;
-				} else if (carChasis == carChasis2) {
-					carChasis = carChasis3;
-				} else {
-					carChasis = carChasis1;
-				}
-				carChasis.GetComponent<Transform> ().localScale = new Vector3 (1, 1, 1);
-			}
 
 			if(GUI.Button(new Rect(20, 100, 200, 100), "Black", customButton)) {
 				Debug.Log("Button Pressed");
@@ -91,6 +78,19 @@ public class chasisTapController : MonoBehaviour {
 			if(GUI.Button(new Rect(860, 100, 200, 100), "Yellow", customButton)) {
 				Debug.Log("Button Pressed");
 				carChasis.GetComponent<Renderer>().sharedMaterial = materials[5];
+			}
+
+			if(GUI.Button(new Rect(20, 260, 410, 100), "Change Chasis", customButton)) {
+				Debug.Log("Button Pressed");
+				carChasis.GetComponent<Transform> ().localScale = new Vector3 (0, 0, 0);
+				if (carChasis == carChasis1) {
+					carChasis = carChasis2;
+				} else if (carChasis == carChasis2) {
+					carChasis = carChasis3;
+				} else {
+					carChasis = carChasis1;
+				}
+				carChasis.GetComponent<Transform> ().localScale = new Vector3 (1, 1, 1);
 			}
 		}
 	}
